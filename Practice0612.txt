@@ -1,0 +1,14 @@
+1.定义一个List对象，如下
+List <String>list = new ArrayList<String>();
+1).在list中添加元素，nihao,wohao,dajiahao,nihao
+2).在list的第二个位置添加元素，tahao
+3).用Iterator迭代器遍历打印list中元素
+4).在打印时，将list中的nihao，修改为nibuhao(提示：需要用到ListIterator)
+
+2.Map接口和HashMap练习
+定义一个Map对象，如下
+Map<String,String> map = newHashMap<String,String>();
+
+1.在map中添加键值对（“1”，“xiaohong”）、(“2”,”xiaowang”)、(“3”,”xiaoli”)
+2.将map中的键值对打印出来（提示：可以将key集合放到一个set中，定义Iterator遍历器取出set中的key，然后通过key的值在map中取出对应value值，并将这两个值打印出来）
+
