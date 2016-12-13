@@ -30,6 +30,20 @@ public class Main {
         System.out.println(map1.keySet());
         System.out.println(map1.entrySet());
 
+        //Using KeySet to fetch data
+        Set<String> keySet = map1.keySet();
+        for (String key : keySet) {
+            System.out.println(map1.get(key));
+        }
+
+        //Using EntrySet to fetch data
+        Set<Map.Entry<String, String>> entrySet = map1.entrySet();
+        for (Map.Entry ent : entrySet) {
+            System.out.print(ent.getKey() + ": ");
+            System.out.println(ent.getValue());
+        }
+
+        //Using Iterator to fetch data
         Iterator i = map1.entrySet().iterator();
         while(i.hasNext()) {
             Map.Entry temp = (Map.Entry)i.next();
