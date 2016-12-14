@@ -22,8 +22,6 @@ public class MapTest {
                 System.out.print(value);
                 System.out.println();
             }
-
-
         }
     }
 }

@@ -28,7 +28,6 @@ public class ListTest {
                 SS.set("nibuhao");
                 String Snd = list.get(i);
                 System.out.println(Snd);
-
             }
 
         }
