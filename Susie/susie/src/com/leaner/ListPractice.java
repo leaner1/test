@@ -1,6 +1,7 @@
 package com.leaner;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -23,13 +24,18 @@ public class ListPractice {
         newlist.add("nihao");
         /*---2---*/
         newlist.add(1,"tahao");
-        /*---3---*/
+//        /*---3---*/
 //        Iterator iterator = newlist.iterator();
 //        for(;iterator.hasNext();){
 //            System.out.println(iterator.next());
 //        }
         /*---4---*/
         ListIterator listIterator = newlist.listIterator();
+        while (listIterator.hasPrevious()){
+            System.out.println(listIterator.previous());
+        }
+
+
         for (;listIterator.hasNext();){
             Integer index = (Integer)listIterator.nextIndex();
             String str = (String)listIterator.next();
@@ -40,9 +46,19 @@ public class ListPractice {
 //                newlist.add(index,"nibuhao");
                 listIterator.set("nibuhao");
             }
+
             System.out.print(index);
             System.out.println(":"+newlist.get(index));
         }
+        newlist.remove(1);
+        newlist.add(1,"nibuhao");
+        System.out.println("_______________________");
+        Iterator iterator = newlist.iterator();
+        for(;iterator.hasNext();){
+            System.out.println(iterator.next());
+        }
+
+
 
 
     }
