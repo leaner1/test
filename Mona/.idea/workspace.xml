@@ -47,8 +47,13 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/MapTest.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="528">
               <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+=======
+            <state relative-caret-position="572">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+>>>>>>> Stashed changes
 =======
             <state relative-caret-position="572">
               <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
@@ -645,7 +650,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="1132000" />
+=======
+    <option name="totallyTimeSpent" value="873000" />
+>>>>>>> Stashed changes
 =======
     <option name="totallyTimeSpent" value="873000" />
 >>>>>>> Stashed changes
@@ -753,6 +762,8 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -804,6 +815,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/src/com/company/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -814,6 +826,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ListTest.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="736">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         <state relative-caret-position="758">
@@ -843,6 +882,7 @@
         <state relative-caret-position="572">
           <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <folding />
         </state>
       </provider>
@@ -867,6 +907,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
           <folding />
