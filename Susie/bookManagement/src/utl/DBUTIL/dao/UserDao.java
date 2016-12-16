@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created by husiq on 12/16/2016.
@@ -48,7 +50,7 @@ public class UserDao {
         ppsm.execute();
     }
 
-    public void removeUser(Integer id) throws java.sql.SQLException{
+    public void deleteUser(Integer id) throws java.sql.SQLException{
         Connection conn = DBUtil.getConnection();
         String sql = "" +
                 " DELETE FROM user " +
@@ -56,6 +58,40 @@ public class UserDao {
         PreparedStatement ppsm = conn.prepareStatement(sql);
         ppsm.setInt(1, id);
         ppsm.execute();
+    }
+
+    public List<User> query(List<Map<String,Object>> params) throws java.sql.SQLException{
+        Connection conn = DBUtil.getConnection();
+        Statement st = conn.createStatement();
+        StringBuilder sqlQuery = new StringBuilder();
+        sqlQuery.append("select * from user where 1=1");
+        if (params != null && params.size()>0){
+            for (int i = 0; i < params.size();i++){
+                Map<String,Object> map = params.get(i);
+                sqlQuery.append(" " + map.get("lo")+ " " + map.get("key") +
+                        " " + map.get("rela") + " " + map.get("value"));
+            }
+        }
+        System.out.println(sqlQuery.toString());
+        ResultSet rs = st.executeQuery(sqlQuery.toString());
+        List<User> users = new ArrayList<User>();
+        User user = null;
+        while (rs.next()){
+            user = new User();
+            user.setId(rs.getInt("id"));
+            user.setName(rs.getString("name"));
+            user.setPasswd(rs.getString("passwd"));
+            user.setEmail(rs.getString("email"));
+            user.setClient(rs.getInt("client") == 1);
+            user.setAdmin(rs.getInt("admin") == 1);
+            user.setSeller(rs.getInt("seller") == 1);
+            users.add(user);
+        }
+        return users;
+    }
+
+    public List<User> query() throws java.sql.SQLException{
+        return query("select * from user;");
     }
 
     public List<User> query(String sqlQuery) throws java.sql.SQLException{
@@ -78,7 +114,7 @@ public class UserDao {
         return users;
     }
 
-    public User get(Integer id) throws java.sql.SQLException{
+    public User getUserById(Integer id) throws java.sql.SQLException{
         User user = new User();
         Connection conn = DBUtil.getConnection();
         String sql = "" +
@@ -98,6 +134,7 @@ public class UserDao {
         }
         return user;
     }
+
     public Integer getIdByName(String name) throws java.sql.SQLException{
         Connection conn = DBUtil.getConnection();
         String sql = "" +
