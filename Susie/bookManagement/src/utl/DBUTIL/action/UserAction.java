@@ -24,11 +24,7 @@ public class UserAction {
         user.setId(ud.getIdByName(user.getName()));
         //update the user
         user.setName("SusieHu");
-
-
-
         ud.updateUser(user);
-
 
         List<User> us = ud.query("select * from user;");
         for (User u : us){
