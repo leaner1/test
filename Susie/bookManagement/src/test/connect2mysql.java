@@ -7,6 +7,7 @@ import java.sql.*;
  */
 public class connect2mysql {
     public static void main(String args[]){
+        //test
         System.out.println("********Start test Mysql*******");
         Connection con = null;
         String sqlUrl = "jdbc:MySQL://127.0.0.1/bookmanagment";
