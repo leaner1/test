@@ -20,7 +20,15 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="src" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.39" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.72" level="application_server_libraries" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-6.0.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
