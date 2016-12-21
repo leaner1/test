@@ -1,0 +1,62 @@
+body{
+    background-image: url(../images/background.jpg);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #888;
+}
+.loginBox {
+    width:  350px;
+    height: 250px;
+    background-color: aliceblue;
+    padding: 1em 1em 1em 1em;
+    border-color: #979797;
+    display: block;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
+#loginInfo{
+    background-color: inherit;
+    width: auto;
+    height: auto;
+    display: block;
+    position: relative;
+    padding-top: 30px;
+    align-content: center;
+
+
+}
+#loginInfo > form > div{
+    width: auto;
+    height: 30px;
+    margin: 20px 50px;
+
+}
+#loginInfo input{
+    width: 100%;
+    height: 28px;
+}
+#submit{
+    font-weight: 400;
+    font-family: "Microsoft Yahei","微软雅黑",SimHei,"黑体","Hiragino Sans GB",STHeiTi,sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#accoutIssue{
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    margin: 10px 20px 0px 50px;
+    height: 40px;
+
+}
+#accoutIssue > div{
+    display: inline;
+    margin: 5px;
+    width: 90px;
+    height:28px;
+}
