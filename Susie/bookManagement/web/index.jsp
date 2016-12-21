@@ -12,5 +12,8 @@
   </head>
   <body>
   $END$
+  <%
+      request.getRequestDispatcher("view/login.jsp").forward(request,response);
+  %>
   </body>
 </html>
