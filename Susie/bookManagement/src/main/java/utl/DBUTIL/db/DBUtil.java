@@ -6,9 +6,6 @@ import java.sql.*;
  * Created by husiq on 12/16/2016.
  */
 public class DBUtil {
-
-
-
         private static final String sqlUrl = "jdbc:mysql://127.0.0.1:3306/bookmanagment";
         private static final String user = "test";
         private static final String passwd = "test";

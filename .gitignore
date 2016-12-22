@@ -1,2 +1,4 @@
 Susie/bookManagement/.idea/*
 Susie/bookManagement/out/
+Susie/bookManagement/target/
+*.iml

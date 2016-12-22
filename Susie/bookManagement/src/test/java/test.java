@@ -1,5 +1,3 @@
-package test;
-
 import utl.DBUTIL.dao.UserDao;
 import utl.DBUTIL.model.User;
 

@@ -10,7 +10,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by husiq on 12/16/2016.
@@ -138,7 +137,7 @@ public class UserDao {
     public Integer getIdByName(String name) throws java.sql.SQLException{
         Connection conn = DBUtil.getConnection();
         String sql = "" +
-                " SELECT id from user " +
+                " SELECT + id " + " from user " +
                 " where name = ?";
         PreparedStatement ppsm = conn.prepareStatement(sql);
         ppsm.setString(1, name);
@@ -148,5 +147,39 @@ public class UserDao {
             id = rs.getInt("id");
         }
         return id;
+
+    }
+
+    public String getPasswdByName(String name) throws java.sql.SQLException{
+        return getvalueByName("passwd",name);
+    }
+
+    public String getvalueByName(String key,String name) throws java.sql.SQLException{
+        Connection conn = DBUtil.getConnection();
+        String sql = "" +
+                " SELECT + " + key + " " + " from user " +
+                " where name = ?";
+        PreparedStatement ppsm = conn.prepareStatement(sql);
+        ppsm.setString(1, name);
+        ResultSet rs = ppsm.executeQuery();
+        String value = "";
+        while (rs.next()){
+            value = rs.getString(key);
+        }
+        return value;
+    }
+
+    public Boolean verifyUser(User user)throws java.sql.SQLException {
+        if (user.getName() != "" && user.getName() != null
+                && user.getPasswd() != "" && user.getPasswd() != null) {
+            if (getPasswdByName(user.getName()) != "" && getPasswdByName(user.getName()) != null) {
+                return user.getPasswd().equals(getPasswdByName(user.getName()));
+            }
+            else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 }

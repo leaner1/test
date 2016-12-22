@@ -5,7 +5,7 @@
   Time: 下午11:01
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
     <title><%=session.getAttribute("Title")%></title>
@@ -15,12 +15,12 @@
 <body>
 <div class="loginBox">
     <div id="loginInfo">
-        <form>
+        <form action="servlet/UserVerify" method="post">
             <div>
-                <input type="text" id="userName" value="邮箱/会员账号/手机号码">
+                <input type="text" id="userName" name="userName">
             </div>
             <div>
-                <input type="password" id="password" value="请输入密码">
+                <input type="password" id="password" name="password">
             </div>
             <div>
                 <input type="submit" id="submit" value="登录">
