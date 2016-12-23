@@ -14,7 +14,7 @@ public class DBUtil {
 
         static {
             try {
-                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
                 con = DriverManager.getConnection(sqlUrl + "?user=" + user + "&password=" + passwd + "&useSSL=true"
                         + "&verifyServerCertificate=false");
             } catch (InstantiationException e) {

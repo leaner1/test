@@ -33,12 +33,11 @@ public class UserVerify extends HttpServlet {
             e.printStackTrace();
         }
 
-
         out.println(vResult);
 
         if(vResult){
             System.out.println("go to main page" + request.getContextPath()+"/view/mainPage.jsp");
-            request.getRequestDispatcher(request.getContextPath()+"/view/mainPage.jsp").forward(request,response);
+            response.sendRedirect(request.getContextPath()+"/view/mainPage.jsp");
         }else{
             System.out.println("go to error page" + request.getContextPath()+"/view/errorPage.jsp");
             response.sendRedirect(request.getContextPath()+"/view/errorPage.jsp");

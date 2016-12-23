@@ -13,5 +13,6 @@
 <body>
     Welcome!
     you are in mainPage!
+    <a href="../index.jsp">退出</a>
 </body>
 </html>

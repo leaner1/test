@@ -157,7 +157,7 @@ public class UserDao {
     public String getvalueByName(String key,String name) throws java.sql.SQLException{
         Connection conn = DBUtil.getConnection();
         String sql = "" +
-                " SELECT + " + key + " " + " from user " +
+                " SELECT  " + key + " " + " from user " +
                 " where name = ?";
         PreparedStatement ppsm = conn.prepareStatement(sql);
         ppsm.setString(1, name);
