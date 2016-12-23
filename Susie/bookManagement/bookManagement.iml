@@ -39,5 +39,7 @@
     </orderEntry>
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet:3.0.0.v201103241009" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.5" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet:3.0.0.v201103241009" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.5" level="project" />
   </component>
 </module>
