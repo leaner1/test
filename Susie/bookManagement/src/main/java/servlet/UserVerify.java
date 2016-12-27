@@ -38,6 +38,7 @@ public class UserVerify extends HttpServlet {
         if(vResult){
             System.out.println("go to main page" + request.getContextPath()+"/view/mainPage.jsp");
             response.sendRedirect(request.getContextPath()+"/view/mainPage.jsp");
+            request.getSession().setAttribute("user",user.getName());
         }else{
             System.out.println("go to error page" + request.getContextPath()+"/view/errorPage.jsp");
             response.sendRedirect(request.getContextPath()+"/view/errorPage.jsp");

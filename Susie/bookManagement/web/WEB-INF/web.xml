@@ -7,8 +7,16 @@
         <servlet-name>UserVerify</servlet-name>
         <servlet-class>servlet.UserVerify</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>servlet.Logout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserVerify</servlet-name>
         <url-pattern>/servlet/UserVerify</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/servlet/Logout</url-pattern>
     </servlet-mapping>
 </web-app>
