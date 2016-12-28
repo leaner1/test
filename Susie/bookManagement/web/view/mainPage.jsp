@@ -13,6 +13,11 @@
 <body>
     Welcome!
     you are in mainPage!
-    <a href="../index.jsp">退出</a>
+    <%--<form action="servlet/logout" method="get">--%>
+        <%----%>
+    <%--</form>--%>
+    <%--<input type="button" value="退出" onclick="">--%>
+    <a href="logout.jsp">退出</a>
+
 </body>
 </html>
