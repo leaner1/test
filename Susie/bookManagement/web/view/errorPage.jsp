@@ -15,7 +15,9 @@
     will transfer to the page right now!</h1>
     <%
         System.out.println("this is error page!");
+        response.setHeader("refresh","2;url=../index.jsp");
     %>
+
     <a href="../index.jsp">login again</a>
 </body>
 </html>
