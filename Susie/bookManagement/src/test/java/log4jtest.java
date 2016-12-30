@@ -19,6 +19,7 @@ public class log4jtest {
         LOGGER.info("This is info message!");
         LOGGER.warn("This is warn message!");
         LOGGER.error("This is error message!");
+        System.out.println("web.root:"+ System.getProperty("CATALINA_HOME"));
 
     }
 
