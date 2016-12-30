@@ -1,4 +1,6 @@
 Susie/bookManagement/.idea/*
 Susie/bookManagement/out/
 Susie/bookManagement/target/
+Susie/bookManagement/log/
+Susie/bookManagement/lib/
 *.iml
