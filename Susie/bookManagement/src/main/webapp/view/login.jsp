@@ -13,6 +13,11 @@
     <%--<link rel="stylesheet" type="text/css" href="/happyReading/css/login.css">--%>
 </head>
 <body>
+<%
+    if (session.getAttribute("user")!=null){
+        response.setHeader("refresh","1;url=/bookM/view/mainPage.jsp");
+    }
+%>
 <div class="loginBox">
     <div id="loginInfo">
         <form action="servlet/UserVerify" method="post">

@@ -34,6 +34,10 @@ public class UserAction {
         UserDao ud = new UserDao();
         return ud.getUserById(id);
     }
+    public User get(String name) throws java.sql.SQLException{
+        UserDao ud = new UserDao();
+        return ud.getUserByName(name);
+    }
     public Boolean verifyUser(User user)throws java.sql.SQLException{
         UserDao ud = new UserDao();
         return ud.verifyUser(user);

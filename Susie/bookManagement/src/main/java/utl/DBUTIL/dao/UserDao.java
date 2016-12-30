@@ -134,6 +134,10 @@ public class UserDao {
         return user;
     }
 
+    public User getUserByName(String name) throws java.sql.SQLException{
+        return getUserById(getIdByName(name));
+    }
+
     public Integer getIdByName(String name) throws java.sql.SQLException{
         Connection conn = DBUtil.getConnection();
         String sql = "" +

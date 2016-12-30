@@ -18,6 +18,7 @@
     <%--</form>--%>
     <%--<input type="button" value="退出" onclick="">--%>
     <a href="logout.jsp">退出</a>
+    <a href="userAccount.jsp">用户信息</a>
 
 </body>
 </html>
