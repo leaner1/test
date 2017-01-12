@@ -25,6 +25,15 @@
         <error-code>404</error-code>
     </error-page>
 
+    <!--<listener>-->
+        <!--<listener-class>monitor.loginListener</listener-class>-->
+    <!--</listener>-->
+
+    <context-param>
+        <param-name>testParam</param-name>
+        <param-value>this is test context-param</param-value>
+    </context-param>
+
     <!--<filter>-->
         <!--<filter-name>Errorfilter</filter-name>-->
         <!--<filter-class>filter.Errorfilter</filter-class>-->

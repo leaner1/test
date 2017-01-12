@@ -54,9 +54,12 @@ body{
     height: 40px;
 
 }
-#accoutIssue > div{
-    display: inline;
-    margin: 5px;
-    width: 90px;
-    height:28px;
+/*#accoutIssue > div{*/
+    /*display: inline;*/
+    /*margin: 5px;*/
+    /*width: 90px;*/
+    /*height:28px;*/
+/*}*/
+#accoutIssue > button{
+    padding:0 10px;
 }

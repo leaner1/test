@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet -->
+    <!-- https://mvnrepository.com/aartifact/javax.servlet/javax.servlet -->
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet</artifactId>

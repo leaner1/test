@@ -15,7 +15,7 @@ import static java.lang.System.out;
 /**
  * Created by husiq on 12/22/2016.
  */
-public class UserVerify extends HttpServlet {
+public class UserVerify extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         out.println("this is UserVerify");
         out.println("hi this is UserVerify");
@@ -24,6 +24,8 @@ public class UserVerify extends HttpServlet {
         user.setName(request.getParameter("userName"));
         user.setPasswd(request.getParameter("password"));
         out.println("hh User: " + user.getName() + "---" + user.getPasswd());
+
+
 
         UserAction ua = new UserAction();
         Boolean vResult = false;
@@ -34,6 +36,15 @@ public class UserVerify extends HttpServlet {
         }
 
         out.println(vResult);
+
+//        try
+//        {
+//            Thread.sleep(10000);
+//        }
+//        catch (Exception e)
+//        {
+//            e.printStackTrace();
+//        }
 
         if(vResult){
             try {

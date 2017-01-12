@@ -1,5 +1,7 @@
 package filter;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
@@ -17,20 +19,22 @@ import java.util.Date;
         initParams = {
                 @WebInitParam(
                         name = "noFilterList",
-                        value = "index.jsp;errorPage.jsp;login.jsp;css;jpg;bookM/;UserVerify")
+                        value = "index.jsp;errorPage.jsp;login.jsp;css;jpg;bookM/;UserVerify;js;html;ttf;woff;.map;register.jsp")
             },
         dispatcherTypes = {DispatcherType.REQUEST}
         )
 public class Loginfilter implements Filter {
 
     private FilterConfig filterConfig;
+    private static final Logger LOGGER = Logger.getLogger(Loginfilter.class.getName());
 
     public void destroy() {
         System.out.println("Loginfilter destory");
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        System.out.println("start Loginfilter" + new Date());
+//        System.out.println("start Loginfilter" + new Date());
+        LOGGER.info(new Date() + "start loginfilter: ");
 
         HttpServletRequest request = (HttpServletRequest)req;
         HttpServletResponse response = (HttpServletResponse)resp;
@@ -49,18 +53,20 @@ public class Loginfilter implements Filter {
                         continue;
                     }
                     if ( request.getRequestURI().endsWith(path)){
-                        System.out.println(path);
+//                        System.out.println(path);
+                        LOGGER.info("the path do not filter : " + path);
                         chain.doFilter(req,resp);
                         return;
                     }
+                    LOGGER.trace("the path filter : " + path);
                 }
 
                 response.sendRedirect(request.getContextPath() + "/");
             }
 
         }
-        System.out.println("end Loginfilter");
-
+//        System.out.println("end Loginfilter");
+        LOGGER.info("*******end Loginfilter");
 //        if ( request.getRequestURI().indexOf("view/login.jsp") != -1
 //                || request.getRequestURI().indexOf("bookM/index.jsp") != -1
 //                || request.getRequestURI().indexOf("servlet/UserVerify.java") != -1
@@ -77,7 +83,8 @@ public class Loginfilter implements Filter {
     }
 
     public void init(FilterConfig config) throws ServletException {
-        System.out.println("Loginfilter init");
+//        System.out.println("Loginfilter init");
+        LOGGER.info("#######loginfilter init");
         filterConfig = config;
     }
 
